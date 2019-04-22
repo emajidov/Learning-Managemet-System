@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html layout:decorator="layouts/common">
+<head>
+    <title th:text="${submission.name + ': ' + submission.task.name}">Submission</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <h4 class="display-6 my-3" th:text="${submission.name + ': ' + submission.task.name}">Submission Details</h4>
+    <div class="card">
+        <dd class="col-sm-9" th:text="${submission.solution}">Some description</dd>
+    </div>
+    <small>
+        <i class="fas fa-pencil-alt"></i> <span
+            th:text="${#temporals.format(submission.submissionDate,'dd-MM-yyyy HH:mm')}">Submission Date</span>
+        <span th:text="${submission.getGrade()}"></span>
+    </small>
+
+    <hr>
+    <div align="right" sec:authorize="hasRole('ROLE_ADMIN')">
+        <form action=""  th:action="@{/tasks/submission/{id}/(id=${submission.id})}" th:object="${submission}"
+              method="post">
+            <div class="form-group col-sm-2" align="center">
+                <label for="grade" >Grade</label>
+                <input type="hidden" th:field="${submission.name}">
+                <input type="hidden" th:field="${submission.submissionDate}">
+                <input type="hidden" th:field="${submission.solution}">
+                <!--<input type="hidden" th:field="${submission.isGraded}">-->
+                <!--<input type="hidden" th:field="${submission.task}">-->
+                <!--<input type="hidden" th:field="${submission.user}">-->
+                <input th:field="*{grade}" class="form-control" id="grade" required th:errorclass="is-invalid">
+                <div class="invalid-feedback" th:errors="*{grade}">
+                    Please provide a grade!
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+</body>
+</html>

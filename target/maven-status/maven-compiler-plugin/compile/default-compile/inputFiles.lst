@@ -1,0 +1,13 @@
+C:\Users\Elgun\Desktop\Learning Management System\src\main\java\hu\elte\lms\controllers\AuthController.java
+C:\Users\Elgun\Desktop\Learning Management System\src\main\java\hu\elte\lms\repositories\UserRepository.java
+C:\Users\Elgun\Desktop\Learning Management System\src\main\java\hu\elte\lms\controllers\TaskController.java
+C:\Users\Elgun\Desktop\Learning Management System\src\main\java\hu\elte\lms\controllers\MainController.java
+C:\Users\Elgun\Desktop\Learning Management System\src\main\java\hu\elte\lms\security\MyUserDetailsService.java
+C:\Users\Elgun\Desktop\Learning Management System\src\main\java\hu\elte\lms\security\WebSecurityConfig.java
+C:\Users\Elgun\Desktop\Learning Management System\src\main\java\hu\elte\lms\entities\Task.java
+C:\Users\Elgun\Desktop\Learning Management System\src\main\java\hu\elte\lms\entities\User.java
+C:\Users\Elgun\Desktop\Learning Management System\src\main\java\hu\elte\lms\security\AuthenticatedUser.java
+C:\Users\Elgun\Desktop\Learning Management System\src\main\java\hu\elte\lms\LearningManagementSystemApplication.java
+C:\Users\Elgun\Desktop\Learning Management System\src\main\java\hu\elte\lms\entities\Submission.java
+C:\Users\Elgun\Desktop\Learning Management System\src\main\java\hu\elte\lms\repositories\SubmissionRepository.java
+C:\Users\Elgun\Desktop\Learning Management System\src\main\java\hu\elte\lms\repositories\TaskRepository.java

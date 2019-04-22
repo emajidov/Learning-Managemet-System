@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html layout:decorator="layouts/common">
+<head>
+    <title>Content page</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <h2 class="display-2 my-3">My tasks</h2>
+    <p><a class="btn btn-primary" href="#" th:href="@{/tasks/new}" role="button">New task</a></p>
+    <div class="list-group">
+        <a th:each="task : ${tasks}" th:href="@{/tasks/{id}(id=${task.id})}"
+           class="list-group-item list-group-item-action" style="margin-bottom: 0.5%">
+            <div class="d-flex w-100 justify-content-between align-items-center">
+                <h5 class="mb-1" th:text="${task.name}">First homework</h5>
+                <hr>
+            </div>
+            <p class="mb-1" th:text="${task.description}">Donec id elit
+                non mi
+                porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+            <hr>
+            <small>
+                <i class="fas fa-calendar-alt" aria-hidden="true"></i> <span
+                    th:text="${#temporals.format(task.deadline,'dd-MM-yyyy HH:mm')}"> Task deadline</span>
+                <i class="fas fa-check-double"></i> <span th:text="${task.getSubmissions().size()}">3</span>
+            </small>
+        </a>
+    </div>
+</div>
+</body>
+</html>
